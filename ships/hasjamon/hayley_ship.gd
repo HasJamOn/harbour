@@ -1,6 +1,7 @@
 extends Sprite2D
 var fps := 60.0 #frames per second.
 var boost_speed := 25.0
+var boost_active := false
 var normal_speed := 10.0
 
 var max_speed := normal_speed
@@ -17,8 +18,13 @@ func _process(delta: float) -> void:
 		direction = direction.normalized()
 	
 	if Input.is_action_just_pressed("boost"):
-		max_speed = boost_speed
-		get_node("Timer").start()
+		if boost_active == false:
+			boost_active = true
+			max_speed = boost_speed
+			get_node("Timer").start()
+			$boostsound_audiostreamplayer.play()
+		else:
+			print("boost is already active")
 	
 	var desired_velocity := max_speed * direction
 	var steering := desired_velocity - velocity
@@ -41,4 +47,5 @@ func _process(delta: float) -> void:
 
 	
 func _on_timer_timeout() -> void:
+	boost_active = false
 	max_speed = normal_speed
