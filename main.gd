@@ -47,7 +47,7 @@ func _process(delta: float) -> void:
 				current_ship.rotation = ship_rotation
 				self.add_child(current_ship)
 		else: 
-			print("There is no ship to remove")
+			print("current_ship is null")
 	if Input.is_action_just_pressed("previous_ship"):
 		if current_ship != null:
 			if ship_id > max_ship_id:
@@ -67,5 +67,5 @@ func _process(delta: float) -> void:
 				current_ship.rotation = ship_rotation
 				self.add_child(current_ship)
 		else: 
-			print("There is no ship to remove")
+			print("current_ship is null")
 		
