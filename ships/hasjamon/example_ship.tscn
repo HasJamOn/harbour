@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5esvkwonqpys"]
 
-[ext_resource type="Texture2D" uid="uid://0txpakmu5kle" path="res://assets/example_ship.png" id="1_4edfb"]
+[ext_resource type="Texture2D" uid="uid://0txpakmu5kle" path="res://assets/hasjamon/example_ship.png" id="1_4edfb"]
 [ext_resource type="Script" path="res://ships/hasjamon/example_ship.gd" id="2_7xn3d"]
 
 [node name="example_ship" type="Sprite2D"]
