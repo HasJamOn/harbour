@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cibbh5ustd54r"]
+
+[ext_resource type="Texture2D" uid="uid://da868uxcl7tst" path="res://assets/hasjamon/hayley_ship_boost_sparkle.png" id="1_xa7dv"]
+[ext_resource type="Script" path="res://ships/hasjamon/boost_sparkle.gd" id="2_bf3mf"]
+
+[node name="boost_sparkle" type="Sprite2D"]
+position = Vector2(-1.90735e-06, 0)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_xa7dv")
+script = ExtResource("2_bf3mf")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

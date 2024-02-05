@@ -8,6 +8,12 @@ var max_speed := normal_speed
 var velocity := Vector2(0,0)
 var steering_factor := 2.0
 
+var boost_sparkle_ressource = load("res://ships/hasjamon/boost_sparkle.tscn")
+var boost_sparkle = boost_sparkle_ressource
+
+func _ready() -> void:
+	boost_sparkle = boost_sparkle_ressource
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var direction := Vector2(0,0)
@@ -22,6 +28,11 @@ func _process(delta: float) -> void:
 			boost_active = true
 			max_speed = boost_speed
 			get_node("Timer").start()
+			#boost flair
+			get_node("sparkle_Timer").start()
+			boost_sparkle = boost_sparkle_ressource.instantiate()
+			boost_sparkle.position.x -= 36
+			self.add_child(boost_sparkle)
 			$boostsound_audiostreamplayer.play()
 		else:
 			print("boost is already active")
@@ -49,3 +60,10 @@ func _process(delta: float) -> void:
 func _on_timer_timeout() -> void:
 	boost_active = false
 	max_speed = normal_speed
+	get_node("sparkle_Timer").stop()
+
+
+func _on_sparkle_timer_timeout() -> void:
+	boost_sparkle = boost_sparkle_ressource.instantiate()
+	boost_sparkle.position.x -= 36
+	self.add_child(boost_sparkle)
