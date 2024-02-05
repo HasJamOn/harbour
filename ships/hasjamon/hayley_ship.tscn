@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmx823ejmcq52"]
+
+[ext_resource type="Texture2D" uid="uid://dpuj6nxlgoter" path="res://assets/hasjamon/hayley_ship.png" id="1_r2bo5"]
+[ext_resource type="Script" path="res://ships/hasjamon/hayley_ship.gd" id="2_r6eqc"]
+
+[node name="hayley_ship" type="Sprite2D"]
+texture = ExtResource("1_r2bo5")
+script = ExtResource("2_r6eqc")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

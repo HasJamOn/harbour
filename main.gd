@@ -6,6 +6,7 @@ var current_ship = null
 
 var default_ship = load("res://ships/default_ship/default_ship.tscn")
 var example_ship = load("res://ships/hasjamon/example_ship.tscn")
+var hayley_ship = load("res://ships/hasjamon/hayley_ship.tscn")
 
 func add_ship(ship_id, ship_name):
 	ships[ship_id] = ship_name
@@ -21,6 +22,8 @@ func _ready() -> void:
 	add_ship(ship_id, default_ship)
 	ship_id += 1
 	add_ship(ship_id, example_ship)
+	ship_id += 1
+	add_ship(ship_id, hayley_ship)
 	max_ship_id = ship_id
 	ship_id = 0
 
