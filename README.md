@@ -10,7 +10,7 @@ step 2: Create variable that loads your ship resource:
   
   var example_ship = load("res://ships/hasjamon/example_ship.tscn")
   
-  var example_ship = load("res://ships/you/your_ship.tscn")
+  var your_ship = load("res://ships/you/your_ship.tscn")
   
 step 3: increase ship_id and then use add_ship with your variable.
 
