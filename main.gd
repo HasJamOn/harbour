@@ -13,10 +13,8 @@ func add_ship(ship_id, ship_name):
 func _ready() -> void:
 	# Load and add the default ship
 	if default_ship != null:
-		print(current_ship)
 		current_ship = default_ship.instantiate()
 		current_ship.position = Vector2(500,300)
-		print(current_ship)
 		self.add_child(current_ship)
 	print("Loaded and added default ship.")
 	
@@ -25,7 +23,6 @@ func _ready() -> void:
 	add_ship(ship_id, example_ship)
 	max_ship_id = ship_id
 	ship_id = 0
-	print(ships)
 
 func _process(delta: float) -> void:
 	var ship_position = current_ship.position
@@ -39,7 +36,6 @@ func _process(delta: float) -> void:
 				current_ship.position = ship_position
 				current_ship.rotation = ship_rotation
 				self.add_child(current_ship)
-				print(ship_id)
 			else:
 				current_ship.queue_free()
 				ship_id += 1
@@ -47,7 +43,6 @@ func _process(delta: float) -> void:
 				current_ship.position = ship_position
 				current_ship.rotation = ship_rotation
 				self.add_child(current_ship)
-				print(ship_id)
 		else: 
 			print("There is no ship to remove")
 	if Input.is_action_just_pressed("previous_ship"):
@@ -59,18 +54,15 @@ func _process(delta: float) -> void:
 				current_ship.position = ship_position
 				current_ship.rotation = ship_rotation
 				self.add_child(current_ship)
-				print(ship_id)
 			else:
 				current_ship.queue_free()
 				ship_id -= 1
 				if ship_id < 0:
 					ship_id = max_ship_id
-					print(max_ship_id)
 				current_ship = ships[ship_id].instantiate()
 				current_ship.position = ship_position
 				current_ship.rotation = ship_rotation
 				self.add_child(current_ship)
-				print(ship_id)
 		else: 
 			print("There is no ship to remove")
 		
