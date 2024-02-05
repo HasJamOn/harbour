@@ -15,6 +15,7 @@ func _ready() -> void:
 	if default_ship != null:
 		print(current_ship)
 		current_ship = default_ship.instantiate()
+		current_ship.position = Vector2(500,300)
 		print(current_ship)
 		self.add_child(current_ship)
 	print("Loaded and added default ship.")
@@ -27,18 +28,24 @@ func _ready() -> void:
 	print(ships)
 
 func _process(delta: float) -> void:
+	var ship_position = current_ship.position
+	var ship_rotation = current_ship.rotation
 	if Input.is_action_just_pressed("next_ship"):
 		if current_ship != null:
 			if ship_id >= max_ship_id:
 				current_ship.queue_free()
 				ship_id = 0
 				current_ship = ships[ship_id].instantiate()
+				current_ship.position = ship_position
+				current_ship.rotation = ship_rotation
 				self.add_child(current_ship)
 				print(ship_id)
 			else:
 				current_ship.queue_free()
 				ship_id += 1
 				current_ship = ships[ship_id].instantiate()
+				current_ship.position = ship_position
+				current_ship.rotation = ship_rotation
 				self.add_child(current_ship)
 				print(ship_id)
 		else: 
@@ -49,6 +56,8 @@ func _process(delta: float) -> void:
 				current_ship.queue_free()
 				ship_id = 0
 				current_ship = ships[ship_id].instantiate()
+				current_ship.position = ship_position
+				current_ship.rotation = ship_rotation
 				self.add_child(current_ship)
 				print(ship_id)
 			else:
@@ -58,6 +67,8 @@ func _process(delta: float) -> void:
 					ship_id = max_ship_id
 					print(max_ship_id)
 				current_ship = ships[ship_id].instantiate()
+				current_ship.position = ship_position
+				current_ship.rotation = ship_rotation
 				self.add_child(current_ship)
 				print(ship_id)
 		else: 
