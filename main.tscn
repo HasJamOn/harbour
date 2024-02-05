@@ -1,12 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://c6h4km1hnkxt5"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_wh24r"]
-[ext_resource type="Texture2D" uid="uid://bdto2b8grnvme" path="res://assets/background.png" id="2_ajdmd"]
+[ext_resource type="Texture2D" uid="uid://de1bgo5n4btet" path="res://assets/background_tiled.png" id="2_lj0vh"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_wh24r")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(575, 325)
-scale = Vector2(5.76213, 4.78516)
-texture = ExtResource("2_ajdmd")
+texture_repeat = 2
+texture = ExtResource("2_lj0vh")
+region_enabled = true
+region_rect = Rect2(0, 0, 50000, 50000)

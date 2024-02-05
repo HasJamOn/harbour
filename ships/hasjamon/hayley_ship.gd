@@ -1,8 +1,7 @@
 extends Sprite2D
-var fps := 60.0 #frames per second.
-var boost_speed := 25.0
+var normal_speed := 600.0
+var boost_speed := 1500.0
 var boost_active := false
-var normal_speed := 10.0
 
 var max_speed := normal_speed
 var velocity := Vector2(0,0)
@@ -40,7 +39,7 @@ func _process(delta: float) -> void:
 	var desired_velocity := max_speed * direction
 	var steering := desired_velocity - velocity
 	velocity += steering * steering_factor * delta
-	position += velocity * fps * delta
+	position += velocity * delta
 	
 	if direction.length() > 0.0:
 		rotation = velocity.angle()
