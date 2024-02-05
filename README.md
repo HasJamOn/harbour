@@ -2,7 +2,7 @@ Swap between ships using the left and right arrow keys.
 
 How to add a ship:
 
-step 1: Create your own username folder under res://ships/"username" and add your ship's .tscn and .gd and any other pieces you create.
+step 1: Create your own username folder under res://ships/"username" and add your ship's .tscn and .gd and any other scenes and scripts you create. (Assets go in seperate assets/username/ folder)
 
 step 2: Create variable that loads your ship resource:
 
