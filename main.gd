@@ -50,7 +50,7 @@ func _process(delta: float) -> void:
 			print("There is no ship to remove")
 	if Input.is_action_just_pressed("previous_ship"):
 		if current_ship != null:
-			if ship_id >= max_ship_id:
+			if ship_id > max_ship_id:
 				current_ship.queue_free()
 				ship_id = 0
 				current_ship = ships[ship_id].instantiate()
