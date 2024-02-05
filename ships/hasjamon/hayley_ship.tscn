@@ -19,6 +19,10 @@ one_shot = true
 wait_time = 0.5
 
 [node name="Camera2D" type="Camera2D" parent="."]
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_horizontal_offset = 1.0
+drag_vertical_offset = 1.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="sparkle_Timer" to="." method="_on_sparkle_timer_timeout"]
