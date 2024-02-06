@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dt4qmqgvv5y6d"
-path="res://.godot/imported/unicorn_boost.wav-190837135f20a200e1fb38f7d31cc830.sample"
+path="res://.godot/imported/ship_unicorn_boost.wav-cc50da9a84719a70cc2bb60f4c6f2e42.sample"
 
 [deps]
 
-source_file="res://assets/hasjamon/unicorn_boost.wav"
-dest_files=["res://.godot/imported/unicorn_boost.wav-190837135f20a200e1fb38f7d31cc830.sample"]
+source_file="res://assets/hasjamon/ship_unicorn_boost.wav"
+dest_files=["res://.godot/imported/ship_unicorn_boost.wav-cc50da9a84719a70cc2bb60f4c6f2e42.sample"]
 
 [params]
 

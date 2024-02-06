@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da868uxcl7tst"
-path="res://.godot/imported/hayley_ship_boost_sparkle.png-c343f8ad191d4a4c24e8b646eefa6a25.ctex"
+uid="uid://b4ci55rfpynbg"
+path="res://.godot/imported/world_portal_rainbow.png-b74abe0e031ba92f86fd9437c6125fd0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/hasjamon/hayley_ship_boost_sparkle.png"
-dest_files=["res://.godot/imported/hayley_ship_boost_sparkle.png-c343f8ad191d4a4c24e8b646eefa6a25.ctex"]
+source_file="res://assets/world_portal_rainbow.png"
+dest_files=["res://.godot/imported/world_portal_rainbow.png-b74abe0e031ba92f86fd9437c6125fd0.ctex"]
 
 [params]
 

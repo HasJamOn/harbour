@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cibbh5ustd54r"]
 
-[ext_resource type="Texture2D" uid="uid://da868uxcl7tst" path="res://assets/hasjamon/hayley_ship_boost_sparkle.png" id="1_xa7dv"]
-[ext_resource type="Script" path="res://ships/hasjamon/boost_sparkle.gd" id="2_bf3mf"]
+[ext_resource type="Texture2D" uid="uid://da868uxcl7tst" path="res://assets/hasjamon/ship_unicorn_boost_sparkle.png" id="1_xa7dv"]
+[ext_resource type="Script" path="res://ships/hasjamon/ship_unicorn_boost_sparkle.gd" id="2_bf3mf"]
 
 [node name="boost_sparkle" type="Sprite2D"]
 position = Vector2(-1.90735e-06, 0)

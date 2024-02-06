@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpuj6nxlgoter"
-path="res://.godot/imported/hayley_ship.png-6b2ffc9994ff307dbbb3c90b6f5ae11f.ctex"
+uid="uid://0txpakmu5kle"
+path="res://.godot/imported/ship_example.png-305ceea102adb497aec5c918c6db1590.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/hasjamon/hayley_ship.png"
-dest_files=["res://.godot/imported/hayley_ship.png-6b2ffc9994ff307dbbb3c90b6f5ae11f.ctex"]
+source_file="res://assets/hasjamon/ship_example.png"
+dest_files=["res://.godot/imported/ship_example.png-305ceea102adb497aec5c918c6db1590.ctex"]
 
 [params]
 

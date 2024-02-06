@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0txpakmu5kle"
-path="res://.godot/imported/example_ship.png-62eec8ef016bb1ee0e09386d1efa8048.ctex"
+uid="uid://da868uxcl7tst"
+path="res://.godot/imported/ship_unicorn_boost_sparkle.png-47f0bb91c399b6d5ad03581c9ea90d79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/hasjamon/example_ship.png"
-dest_files=["res://.godot/imported/example_ship.png-62eec8ef016bb1ee0e09386d1efa8048.ctex"]
+source_file="res://assets/hasjamon/ship_unicorn_boost_sparkle.png"
+dest_files=["res://.godot/imported/ship_unicorn_boost_sparkle.png-47f0bb91c399b6d5ad03581c9ea90d79.ctex"]
 
 [params]
 

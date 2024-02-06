@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://01sqi1k2e1uo"]
 
-[ext_resource type="Script" path="res://ships/default_ship/default_ship.gd" id="1_0iojr"]
-[ext_resource type="Texture2D" uid="uid://dfexgwenoy3xe" path="res://assets/default_ship.png" id="1_57qk1"]
+[ext_resource type="Script" path="res://ships/default/ship_default.gd" id="1_0iojr"]
+[ext_resource type="Texture2D" uid="uid://dfexgwenoy3xe" path="res://assets/ship_default.png" id="1_57qk1"]
 
 [node name="default_ship" type="Sprite2D"]
 texture = ExtResource("1_57qk1")

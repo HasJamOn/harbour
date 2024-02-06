@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5esvkwonqpys"]
 
-[ext_resource type="Texture2D" uid="uid://0txpakmu5kle" path="res://assets/hasjamon/example_ship.png" id="1_4edfb"]
-[ext_resource type="Script" path="res://ships/hasjamon/example_ship.gd" id="2_7xn3d"]
+[ext_resource type="Texture2D" uid="uid://0txpakmu5kle" path="res://assets/hasjamon/ship_example.png" id="1_4edfb"]
+[ext_resource type="Script" path="res://ships/hasjamon/ship_example.gd" id="2_7xn3d"]
 
-[node name="example_ship" type="Sprite2D"]
+[node name="ship_example_Sprite2D" type="Sprite2D"]
 texture = ExtResource("1_4edfb")
 script = ExtResource("2_7xn3d")
 

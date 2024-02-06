@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://dmx823ejmcq52"]
 
-[ext_resource type="Texture2D" uid="uid://dpuj6nxlgoter" path="res://assets/hasjamon/hayley_ship.png" id="1_r2bo5"]
-[ext_resource type="Script" path="res://ships/hasjamon/hayley_ship.gd" id="2_r6eqc"]
-[ext_resource type="AudioStream" uid="uid://dt4qmqgvv5y6d" path="res://assets/hasjamon/unicorn_boost.wav" id="3_lheuw"]
+[ext_resource type="Texture2D" uid="uid://dpuj6nxlgoter" path="res://assets/hasjamon/ship_unicorn.png" id="1_r2bo5"]
+[ext_resource type="Script" path="res://ships/hasjamon/ship_unicorn.gd" id="2_r6eqc"]
+[ext_resource type="AudioStream" uid="uid://dt4qmqgvv5y6d" path="res://assets/hasjamon/ship_unicorn_boost.wav" id="3_lheuw"]
 
-[node name="hayley_ship" type="Sprite2D"]
+[node name="ship_unicorn_Sprite2D" type="Sprite2D"]
 texture = ExtResource("1_r2bo5")
 script = ExtResource("2_r6eqc")
 
-[node name="boostsound_audiostreamplayer" type="AudioStreamPlayer2D" parent="."]
+[node name="boost_sound_AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_lheuw")
 
 [node name="Timer" type="Timer" parent="."]

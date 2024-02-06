@@ -7,7 +7,7 @@ var max_speed := normal_speed
 var velocity := Vector2(0,0)
 var steering_factor := 2.0
 
-var boost_sparkle_ressource = load("res://ships/hasjamon/boost_sparkle.tscn")
+var boost_sparkle_ressource = load("res://ships/hasjamon/ship_unicorn_boost_sparkle.tscn")
 var boost_sparkle = boost_sparkle_ressource
 
 func _ready() -> void:
@@ -32,7 +32,7 @@ func _process(delta: float) -> void:
 			boost_sparkle = boost_sparkle_ressource.instantiate()
 			boost_sparkle.position.x -= 36
 			self.add_child(boost_sparkle)
-			$boostsound_audiostreamplayer.play()
+			$boost_sound_AudioStreamPlayer2D.play()
 		else:
 			print("boost is already active")
 	

@@ -1,71 +1,71 @@
 extends Node2D
 var ships := {} # Empty Dictionary for storing the ships and giving them a number to identify them by.
 var ship_id := 0
-var max_ship_id := 0
-var current_ship = null
+var ship_id_max := 0
+var ship_current = null
 
-var default_ship = load("res://ships/default_ship/default_ship.tscn")
-var example_ship = load("res://ships/hasjamon/example_ship.tscn")
-var hayley_ship = load("res://ships/hasjamon/hayley_ship.tscn")
+var ship_default = load("res://ships/default/ship_default.tscn")
+var ship_example = load("res://ships/hasjamon/ship_example.tscn")
+var ship_unicorn = load("res://ships/hasjamon/ship_unicorn.tscn")
 
-func add_ship(ship_id, ship_name):
+func ship_add(ship_id, ship_name):
 	ships[ship_id] = ship_name
 
 func _ready() -> void:
 	# Load and add the default ship
-	if default_ship != null:
-		current_ship = default_ship.instantiate()
-		current_ship.position = Vector2(500,300)
-		self.add_child(current_ship)
+	if ship_default != null:
+		ship_current = ship_default.instantiate()
+		ship_current.position = Vector2(500,300)
+		self.add_child(ship_current)
 	print("Loaded and added default ship.")
 	
-	add_ship(ship_id, default_ship)
+	ship_add(ship_id, ship_default)
 	ship_id += 1
-	add_ship(ship_id, example_ship)
+	ship_add(ship_id, ship_example)
 	ship_id += 1
-	add_ship(ship_id, hayley_ship)
-	max_ship_id = ship_id
+	ship_add(ship_id, ship_unicorn)
+	ship_id_max = ship_id
 	ship_id = 0
 
 func _process(delta: float) -> void:
-	var ship_position = current_ship.position
-	var ship_rotation = current_ship.rotation
-	if Input.is_action_just_pressed("next_ship"):
-		if current_ship != null:
-			if ship_id >= max_ship_id:
-				current_ship.queue_free()
+	var ship_position = ship_current.position
+	var ship_rotation = ship_current.rotation
+	if Input.is_action_just_pressed("ship_next"):
+		if ship_current != null:
+			if ship_id >= ship_id_max:
+				ship_current.queue_free()
 				ship_id = 0
-				current_ship = ships[ship_id].instantiate()
-				current_ship.position = ship_position
-				current_ship.rotation = ship_rotation
-				self.add_child(current_ship)
+				ship_current = ships[ship_id].instantiate()
+				ship_current.position = ship_position
+				ship_current.rotation = ship_rotation
+				self.add_child(ship_current)
 			else:
-				current_ship.queue_free()
+				ship_current.queue_free()
 				ship_id += 1
-				current_ship = ships[ship_id].instantiate()
-				current_ship.position = ship_position
-				current_ship.rotation = ship_rotation
-				self.add_child(current_ship)
+				ship_current = ships[ship_id].instantiate()
+				ship_current.position = ship_position
+				ship_current.rotation = ship_rotation
+				self.add_child(ship_current)
 		else: 
-			print("current_ship is null")
-	if Input.is_action_just_pressed("previous_ship"):
-		if current_ship != null:
-			if ship_id > max_ship_id:
-				current_ship.queue_free()
+			print("ship_current is null")
+	if Input.is_action_just_pressed("ship_previous"):
+		if ship_current != null:
+			if ship_id > ship_id_max:
+				ship_current.queue_free()
 				ship_id = 0
-				current_ship = ships[ship_id].instantiate()
-				current_ship.position = ship_position
-				current_ship.rotation = ship_rotation
-				self.add_child(current_ship)
+				ship_current = ships[ship_id].instantiate()
+				ship_current.position = ship_position
+				ship_current.rotation = ship_rotation
+				self.add_child(ship_current)
 			else:
-				current_ship.queue_free()
+				ship_current.queue_free()
 				ship_id -= 1
 				if ship_id < 0:
-					ship_id = max_ship_id
-				current_ship = ships[ship_id].instantiate()
-				current_ship.position = ship_position
-				current_ship.rotation = ship_rotation
-				self.add_child(current_ship)
+					ship_id = ship_id_max
+				ship_current = ships[ship_id].instantiate()
+				ship_current.position = ship_position
+				ship_current.rotation = ship_rotation
+				self.add_child(ship_current)
 		else: 
-			print("current_ship is null")
+			print("ship_current is null")
 		
