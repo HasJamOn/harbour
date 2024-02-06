@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu5ng0eblkbub"]
+
+[ext_resource type="Texture2D" uid="uid://bdmicjm1ftsvb" path="res://assets/hasjamon/ship_monkeyrocket.png" id="1_ykuby"]
+[ext_resource type="Script" path="res://ships/hasjamon/ship_monkeyrocket.gd" id="2_4f2r3"]
+
+[node name="ship_monkeyrocket_Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_ykuby")
+script = ExtResource("2_4f2r3")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+drag_vertical_enabled = true
+drag_horizontal_offset = 0.8
+drag_left_margin = 1.0
+drag_top_margin = 0.6
+drag_right_margin = 0.0
+drag_bottom_margin = 0.6
+editor_draw_drag_margin = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
